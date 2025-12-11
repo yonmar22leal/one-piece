@@ -1,0 +1,83 @@
+.puzzle-heart {
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #f7d9e3 0%, #d3eefd 100%);
+  border-radius: 30px;
+  box-shadow: 0 16px 56px #c1cff533;
+  position: relative;
+  overflow: hidden;
+}
+
+.heart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.puzzle-piece-vertical {
+  width: 96%;
+  padding: 1.1rem 0.5rem;
+  transition: transform 0.32s cubic-bezier(.69,-0.03,.49,1.38), box-shadow .3s;
+  will-change: transform, box-shadow;
+  /* ✅ SIEMPRE NORMAL - sin rotación inicial */
+  transform: rotate(0deg);
+}
+
+.puzzle-piece-vertical.left {
+  padding-left: 2.5rem;
+}
+.puzzle-piece-vertical.right {
+  padding-right: 2.5rem;
+}
+
+/* ✅ HOVER: solo escala, sin rotación */
+.puzzle-piece-vertical:hover {
+  transform: scale(1.036) translateY(-10px) rotate(0deg);
+  z-index: 10;
+  box-shadow: 0 8px 32px #b2beee44;
+}
+
+.puzzle-piece-vertical .placeholder {
+  font-weight: 700;
+  font-size: 2rem;
+  background: repeating-linear-gradient(135deg, #f0f2f4 0 18px, #f8ceea 20px 36px);
+}
+
+.puzzle-piece-vertical img {
+  transition: box-shadow .3s, filter .24s;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+.puzzle-piece-vertical:hover img {
+  box-shadow: 0 12px 40px #efb3f766, 0 0 0 7px #e5f3fe70;
+  filter: brightness(1.1);
+}
+
+/* ✅ ANIMACIÓN CLICK - heartbeat */
+@keyframes heartBeat {
+  0% { transform: scale(1); }
+  12% { transform: scale(1.10); }
+  22% { transform: scale(1.07); }
+  38% { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+
+.puzzle-piece-vertical.clicked {
+  animation: heartBeat 0.6s cubic-bezier(.68,-0.55,.265,1.55);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .puzzle-piece-vertical {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+    padding: 1rem 0.2rem;
+  }
+  .puzzle-piece-vertical.left,
+  .puzzle-piece-vertical.right { 
+    padding-left: 1rem; 
+    padding-right: 1rem;
+  }
+}

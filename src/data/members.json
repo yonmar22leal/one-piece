@@ -1,0 +1,31 @@
+[
+  { "id": 1, "name": "Sami", "photo": "/src/assets/images/sami.jpeg", 
+  "desc": "Querida Sami,No puedo evitar sonreír al recordar la primera vez que nos cruzamos. Era el primer día de segundo año, y Daniela, super preocupada, me había preparado para hablarte, asegurándome que estarías sola (¡ja!). Estábamos en el salón de abajo; tú, sentada frente a mí, hablando con Mariandys. Fue allí cuando te pregunté:¿Tu Eres Samantha? Y tú, con esa risa que te caracteriza, respondiste:Y tú eres Valeria, supongo (¡jajaja!). Sin saberlo, ese fue el inicio de una amistad que valoro profundamente y que llena mi vida de felicidad 🥹. Sami, admiro tanto tu disposición SIEMPRE, tu sinceridad y tu lealtad. Sé que en las buenas y en las malas, siempre estás ahí, y eso significa el mundo para mí 🩷. Tienes un corazón enorme, y estoy infinitamente agradecida por ser y estar siempre a mi lado. Con cariño,Valeria",
+   "puzzlePiece":"/src/assets/images/1.webp" , "images": [
+      "/src/assets/images/carla.jpg",
+      "/src/assets/images/carla.jpg",
+      "/src/assets/images/carla.jpg",
+      "/src/assets/images/carla.jpg",
+      "/src/assets/images/carla.jpg"
+   ]},
+  { "id": 2, "name": "Angie", "photo": "/src/assets/images/angie.jpeg", "desc": "Querida Angie (corazón no sé de qué color) :Recuerdo la primera vez que nos conocimos como amigas... Siempre te había visto en el colegio durante primaria, recuerdo estudiamos juntas un grado, pero luego fuiste siempre chica de la A y la C jjajaja Angie, fue esas veces en 5to año, dónde tú y el abuelo sin saberlo, sin planearlo, sin esperarlo (ustedes tenían un grupo) conectaron con nosotros La conexión más linda y las piezas necesarias para completar nuestro rompecabezas de ONE PIECE 🥺 Desde entonces te convertiste en los abrazos más sinceros, reconfortantes y amados del grupo, esa amiga que puede ser el pañito de lágrimas y siempre estará dispuesta a dar todo de ella, gracias por eso y te admiramos muchísimo a mi amiga Snoopy (porque a parte de que te encanta) nos expresas tu cariño y emociones muchas veces sin necesidad de palabras 🥺🤍" , "puzzlePiece":"/src/assets/images/2.webp" , "images": [
+      "/src/assets/images/pedro.avif",
+      "/src/assets/images/pedro.avif",
+      "/src/assets/images/carla.jpg",
+      "/src/assets/images/carla.jpg",
+      "/src/assets/images/carla.jpg" 
+    ]},
+  { "id": 3, "name": "Lucía", "photo": "/src/assets/images/lucia.webp", "desc": "La creativa" , "puzzlePiece":"/src/assets/images/puzzle-3.png" ,"images": [
+      "/src/assets/images/carla.jpg",
+      "/src/assets/images/carla.jpg",
+      "/src/assets/images/carla.jpg",
+      "/src/assets/images/carla.jpg",
+      "/src/assets/images/carla.jpg" 
+    ]},
+  { "id": 4, "name": "Juan", "photo": "/src/assets/images/juan.jpg", "desc": "El estratega" , "puzzlePiece":"/src/assets/images/puzzle-4.png" },
+  { "id": 5, "name": "Sofía", "photo": "/src/assets/images/sofia.webp", "desc": "La optimista" , "puzzlePiece":"/src/assets/images/5.webp" },
+  { "id": 6, "name": "Miguel", "photo": "/src/assets/images/miguel.jpg", "desc": "El bromista" , "puzzlePiece":"/src/assets/images/puzzle-6.png" },
+  { "id": 7, "name": "Ana", "photo": "/src/assets/images/ana.webp", "desc": "La soñadora" , "puzzlePiece":"/src/assets/images/puzzle-7.png" },
+  { "id": 8, "name": "Luis", "photo": "/src/assets/images/luis.avif", "desc": "El protector" , "puzzlePiece":"/src/assets/images/8.png" },
+  { "id": 9, "name": "Valeria", "photo": "/src/assets/images/valeria.webp", "desc": "La valiente" , "puzzlePiece":"/src/assets/images/puzzle-9.png" }
+]

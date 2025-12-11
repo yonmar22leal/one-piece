@@ -1,0 +1,67 @@
+.heart-3x3-container {
+  max-width: 650px;
+  margin: 3.6rem auto 0 auto;
+  padding: 0;
+  background: linear-gradient(135deg, #fdedf6 0%, #daf3fe 100%);
+  border-radius: 40px;
+  box-shadow: 0 20px 70px #cdf4f444;
+}
+
+.heart-image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.heart-full-img {
+  height: 500px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px;
+  object-fit: contain;
+  animation: heartBeat 1.5s infinite cubic-bezier(.4,0,.6,1);
+}
+
+.heart-full-img.clicked {
+  animation: heartClick 0.7s ease-out forwards;
+}
+
+@keyframes heartClick {
+  0% { transform: scale(1) rotate(0deg); filter: brightness(1); }
+  30% { transform: scale(1.08) rotate(-5deg); filter: brightness(1.06); }
+  100% { transform: scale(1) rotate(0deg); filter: brightness(1); }
+}
+
+/* Modal / gallery styles */
+.heart-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.heart-modal-content {
+  max-height: 85vh;
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.28);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+
+}
+.modal-close {
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  line-height: 1;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+
+
+
