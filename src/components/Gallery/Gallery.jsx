@@ -9,7 +9,7 @@ const Gallery = ({ gallery }) => {
       // Si ya está con zoom, alterna el flip
       setFlippedId(flippedId === id ? null : id);
     } else {
-      // Si no está con zoom, activa zoom y limpia flip
+      // Si no está con zoom, activa zoom y limpia flip.
       setZoomedId(id);
       setFlippedId(null);
     }
