@@ -66,3 +66,23 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* Mobile-first responsive para desktop */
+@media (min-width: 768px) {
+  .puzzle-piece-vertical {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 2rem !important;
+    padding: 1.5rem !important;
+  }
+  
+  .avatar-container {
+    max-width: 320px !important;
+    height: 320px !important;
+  }
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}

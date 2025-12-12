@@ -32,12 +32,6 @@
   padding-right: 2.5rem;
 }
 
-/* ✅ HOVER: solo escala, sin rotación */
-.puzzle-piece-vertical:hover {
-  transform: scale(1.036) translateY(-10px) rotate(0deg);
-  z-index: 10;
-  box-shadow: 0 8px 32px #b2beee44;
-}
 
 .puzzle-piece-vertical .placeholder {
   font-weight: 700;
@@ -49,10 +43,6 @@
   transition: box-shadow .3s, filter .24s;
   box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
-.puzzle-piece-vertical:hover img {
-  box-shadow: 0 12px 40px #efb3f766, 0 0 0 7px #e5f3fe70;
-  filter: brightness(1.1);
-}
 
 /* ✅ ANIMACIÓN CLICK - heartbeat */
 @keyframes heartBeat {
@@ -63,9 +53,6 @@
   100% { transform: scale(1); }
 }
 
-.puzzle-piece-vertical.clicked {
-  animation: heartBeat 0.6s cubic-bezier(.68,-0.55,.265,1.55);
-}
 
 /* Responsive */
 @media (max-width: 700px) {
@@ -81,3 +68,49 @@
     padding-right: 1rem;
   }
 }
+
+
+/* Base: móvil en columna */
+.puzzle-piece-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+  gap: 1rem;
+  cursor: pointer;
+  perspective: 1500;
+  width: 100%;
+  padding: 1rem 0.5rem;
+}
+
+/* Desktop: fila y alternancia izquierda/derecha */
+@media (min-width: 768px) {
+  .puzzle-piece-vertical {
+    flex-direction: row;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    gap: 2rem;
+  }
+
+  .puzzle-piece-vertical.left {
+    flex-direction: row;        /* imagen izquierda, texto derecha */
+    text-align: left;
+  }
+
+  .puzzle-piece-vertical.right {
+    flex-direction: row-reverse; /* imagen derecha, texto izquierda */
+    text-align: right;
+  }
+
+  .puzzle-piece-vertical.right .info-container {
+    align-items: flex-end;
+  }
+
+  .avatar-container {
+    max-width: 320px;
+    height: 320px;
+  }
+}
+
+

@@ -19,7 +19,6 @@
   padding: 2rem 1rem;
   overflow: visible;
   background-image: url("/src/assets/images/madera4.png");
-  background-size: cover;
 }
 
 .heart-gallery-item {
@@ -161,3 +160,35 @@
 .card-front img { display: block; }
 
 
+/* MOBILE: una foto por fila */
+@media (max-width: 700px) {
+  .heart-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 0.5rem;
+    overflow: visible;
+  }
+
+  .heart-gallery-item {
+    width: 85%;
+    max-width: 260px;
+    margin: 0;
+    transform: rotate(0deg);        /* sin inclinación */
+  }
+  
+  .heart-gallery-item:nth-child(2n),
+  .heart-gallery-item:nth-child(3n),
+  .heart-gallery-item:nth-child(4n) {
+    transform: rotate(0deg);
+  }
+
+  .heart-gallery-item.zoomed {
+    transform: scale(1.15);         /* zoom más suave en móvil */
+  }
+
+  .heart-gallery-item img {
+    height: auto;                   /* deja que la altura se adapte */
+  }
+}
