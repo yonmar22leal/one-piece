@@ -19,7 +19,7 @@ function App() {
         <h1 style={{fontSize: '2.6rem', margin: 0}}>Mi página — One Piece</h1>
       </header>
 
-      <main style={{padding: '2rem 1rem'}}>
+      <main>
         <TittleAnimate text="titulo animado" />
         <PuzzleHeart members={members} />
         <PuzzleGridHeart members={members} />

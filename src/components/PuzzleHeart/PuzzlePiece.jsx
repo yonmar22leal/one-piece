@@ -47,6 +47,9 @@ const PuzzlePiece = ({ member, align = 'left', size }) => {
     cursor: 'pointer',
     perspective: 1500,
     width: '100%',
+    backgroundColor: member?.color || 'transparent',
+    borderRadius: '24px',
+    boxShadow: '0 8px 24px rgba(0,0,0,0.16)',
     padding: '1rem 0.5rem'
   };
 
@@ -176,7 +179,6 @@ const PuzzlePiece = ({ member, align = 'left', size }) => {
               color: '#888', 
               fontStyle: 'italic',
               padding: '0.8rem 1rem',
-              background: 'linear-gradient(135deg, #f0f2f4 0%, #f8ceea 100%)',
               borderRadius: '12px',
               border: '2px dashed #ddd',
               cursor: 'pointer',

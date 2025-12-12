@@ -28,7 +28,7 @@ const PuzzleGridHeart = () => {
 
       <div className="heart-image-wrapper">
         <img
-          src="/src/assets/images/corazon-completo.png"
+          src="/images/corazon-completo.png"
           alt="Corazón armado completo"
           className={`heart-full-img ${pulse ? 'clicked' : ''}`}
           onClick={handleClick}

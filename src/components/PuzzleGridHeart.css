@@ -63,21 +63,6 @@
 }
 
 /* Mobile-first: base para teléfono */
-.puzzle-heart {
-  padding: 1rem 0.5rem;
-  background: linear-gradient(135deg, #f7d9e3 0%, #d3eefd 100%);
-  border-radius: 20px;
-  box-shadow: 0 8px 24px #c1cff533;
-  margin: 1rem;
-}
-
-.heart-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 100%;
-}
-
 .puzzle-piece-vertical {
   width: 100%;
   padding: 1rem 0.5rem;

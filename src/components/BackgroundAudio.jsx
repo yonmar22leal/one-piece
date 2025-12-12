@@ -66,7 +66,7 @@ function BackgroundAudio() {
         style={{
           position: 'fixed',
           top: 20,
-          right: 20,
+          right: 60,
           zIndex: 1000,
           padding: '12px 18px',
           borderRadius: '50px',
