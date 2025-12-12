@@ -1,260 +1,260 @@
 [
     {
         "id": 1,
-        "photo": "/src/assets/images/gallery-1.jpeg",
+        "photo": "/images/gallery-1.jpeg",
         "date": "22/06/2022",
         "note": "Cuando el matriarcado hizo proyecto"
     },
     {
         "id": 2,
-        "photo": "/src/assets/images/gallery-2.jpeg",
+        "photo": "/images/gallery-2.jpeg",
         "date": "2023-11-15",
         "note": "Captura del paisaje durante nuestra excursión de invierno."
     },
     {
         "id": 3,
-        "photo": "/src/assets/images/gallery-3.jpeg",
+        "photo": "/images/gallery-3.jpeg",
         "date": "2024-01-20",
         "note": "Reunión familiar en la casa de campo."
     },
     {
         "id": 4,
-        "photo": "/src/assets/images/gallery-4.jpeg",
+        "photo": "/images/gallery-4.jpeg",
         "date": "2024-02-14",
         "note": "Celebración del Día de San Valentín."
     },
     {
         "id": 5,
-        "photo": "/src/assets/images/gallery-5.jpeg",
+        "photo": "/images/gallery-5.jpeg",
         "date": "21/06/2023",
         "note": "Gracias por ir a cada cumpleaños, sin importar hora 🥺 PD: eran las 3pm ajajajja"
     },
     {
         "id": 6,
-        "photo": "/src/assets/images/gallery-6.jpeg",
+        "photo": "/images/gallery-6.jpeg",
         "date": "25/02/2020",
         "note": "Antes de nuestro glow up 💗 siempre juntas"
     },
     {
         "id": 7,
-        "photo": "/src/assets/images/gallery-7.jpeg",
+        "photo": "/images/gallery-7.jpeg",
         "date": "07-10-2025",
         "note": "Un cumpleaños difícil, Pero juntos 🥺💗"
     },
     {
         "id": 8,
-        "photo": "/src/assets/images/gallery-8.jpeg",
+        "photo": "/images/gallery-8.jpeg",
         "date": "2024-06-18",
         "note": "Excursión a la montaña con vistas impresionantes."
     },
     {
         "id": 9,
-        "photo": "/src/assets/images/gallery-9.jpeg",
+        "photo": "/images/gallery-9.jpeg",
         "date": "2024-07-04",
         "note": "Celebración del Día de la Independencia con fuegos artificiales."
     },
     {
         "id": 10,
-        "photo": "/src/assets/images/gallery-10.jpeg",
+        "photo": "/images/gallery-10.jpeg",
         "date": "2024/08/12",
         "note": "Día de relax en el spa con amigos."
     },
     {
         "id": 11,
-        "photo": "/src/assets/images/gallery-11.jpeg",
+        "photo": "/images/gallery-11.jpeg",
         "date": "19/12/2023",
         "note": "El sol que aguantamos para llegar ese día, valió la pena totalmente 🫶🏻."
     },
     {
         "id": 12,
-        "photo": "/src/assets/images/gallery-12.jpeg",
+        "photo": "/images/gallery-12.jpeg",
         "date": "30/07/2022",
         "note": "Regias, bellas y una intrusa ajajja"
     },
     {
         "id": 13,
-        "photo": "/src/assets/images/gallery-14.jpeg",
+        "photo": "/images/gallery-14.jpeg",
         "date": "28/07/2022",
         "note": "He aquí, con nuestros profes favoritos 🤭🥺 noren quien fue la guia de 1ero, mami Nino, papi Mau, el profe pana de Adrián y la mejor profe de inglés"
     },
     {
         "id": 14,
-        "photo": "/src/assets/images/gallery-15.jpeg",
+        "photo": "/images/gallery-15.jpeg",
         "date": "28/09/2022",
         "note": "Celebrando juntos cada cumpleaños, ese día llegamos cantando cada uno un cumpleaños distinto ajajajja"
     },
     {
         "id": 15,
-        "photo": "/src/assets/images/gallery-16.jpeg",
+        "photo": "/images/gallery-16.jpeg",
         "date": "23/06/2022",
         "note": "Lo más loco que hicimos luego de la mega caravana, fue ir por unos frappe🤭"
     },
     {
         "id": 16,
-        "photo": "/src/assets/images/gallery-13.jpeg",
+        "photo": "/images/gallery-13.jpeg",
         "date": "06/08/2022",
         "note": "Esta sesión de foto mientras jeanwil hacia arepas, era lo mejor. En ese tv eramos baby 💗"
 
     },
     {
         "id": 17,
-        "photo": "/src/assets/images/gallery-17.jpeg",
+        "photo": "/images/gallery-17.jpeg",
         "date": "21/04/2022",
         "note": "CUBOS+CUBOS+CUBOS= CUBOS \n jajajajaja nuestra amistad se fortalecía con cada cubo ajajaaj"
     },
     {
         "id": 18,
-        "photo": "/src/assets/images/gallery-18.jpeg",
+        "photo": "/images/gallery-18.jpeg",
         "date": "23/06/22",
         "note": "Felices, antes de gritar y cantar en nuestra caravana."
     },
     {
         "id": 19,
-        "photo": "/src/assets/images/gallery-19.jpeg",
+        "photo": "/images/gallery-19.jpeg",
         "date": "21/07/2022",
         "note": "Este día se nos unió Angie y jeanwil al grupo ❤️ Luego de ensayar en pleno metro nuestro baile de graduación, nos quedamos inventando, haciendo locuras y grabando videos Que día tan feliz 🥺."
     },
     {
         "id": 20,
-        "photo": "/src/assets/images/gallery-20.jpeg",
+        "photo": "/images/gallery-20.jpeg",
         "date": "22/06/2025",
         "note": "🥺🤍mis felices 20 \n Gracias ser y estar."
     },
     {
         "id": 21,
-        "photo": "/src/assets/images/gallery-21.jpeg",
+        "photo": "/images/gallery-21.jpeg",
         "date": "11/11/2022",
         "note": "Comer parrilla y tomar fotos random fue el plan de ese día 🫶🏻."
     },
     {
         "id": 22,
-        "photo": "/src/assets/images/gallery-22.jpeg",
+        "photo": "/images/gallery-22.jpeg",
         "date": "02/08/2022",
         "note": "La única foto juntos y bellos (mi recuerdo lindo) \n PD: ignoremos al de negro de la esquina ajajja."
     },
     {
         "id": 23,
-        "photo": "/src/assets/images/gallery-23.jpeg",
+        "photo": "/images/gallery-23.jpeg",
         "date": "19/12/2023",
         "note": "El matriarcado y Ale (que ignoremos que llegó mareado y vomitando) ajajajajajaj."
     },
     {
         "id": 24,
-        "photo": "/src/assets/images/gallery-24.jpeg",
+        "photo": "/images/gallery-24.jpeg",
         "date": "17/06/2022",
         "note": "Las mosqueterascomo nos decía la profe nino💗."
     },
     {
         "id": 25,
-        "photo": "/src/assets/images/gallery-25.jpeg",
+        "photo": "/images/gallery-25.jpeg",
         "date": "08/09/2024",
         "note": "Reunión random en qué sami, comprar en 900 y actualizarnos son los mejores planes ❤️."
     },
     {
         "id": 26,
-        "photo": "/src/assets/images/gallery-26.jpeg",
+        "photo": "/images/gallery-26.jpeg",
         "date": "30/08/2022",
         "note": "La foto con filtro de la graduación 🤭\nPD: Gaby llegó tarde al acto ajaaj."
     },
     {
         "id": 27,
-        "photo": "/src/assets/images/gallery-27.jpeg",
+        "photo": "/images/gallery-27.jpeg",
         "date": "30/08/2022",
         "note": "Fotito random de la fiesta, después de 3 cócteles sin alcohol, y decir que el bartender era lindo🤣."
     },
     {
         "id": 28,
-        "photo": "/src/assets/images/gallery-28.jpeg",
+        "photo": "/images/gallery-28.jpeg",
         "date": "29/12/2024",
         "note": "Terminando el año como se debía ❤️ \nPD: gracias Gaby."
     },
     {
         "id": 29,
-        "photo": "/src/assets/images/gallery-29.jpeg",
+        "photo": "/images/gallery-29.jpeg",
         "date": "28/09/2024",
         "note": "Al cumple en que nadie faltaba y las tortas eran lo máximo."
     },
     {
         "id": 30,
-        "photo": "/src/assets/images/gallery-30.jpeg",
+        "photo": "/images/gallery-30.jpeg",
         "date": "07/11/2018",
         "note": "En los años 1600 jajajaja reunirnos, jugar a las mejores maquilladoras era lo mejor \nPD: porque nadie me dijo que la boca vinotinto no quedaba bien ajajaj."
     },
     {
         "id": 31,
-        "photo": "/src/assets/images/gallery-31.jpeg",
+        "photo": "/images/gallery-31.jpeg",
         "date": "07/10/2022",
         "note": "Un feliz cumple a Angie, ignoremos que nos perdimos y el papá de Gaby nos dió vueltas por toda María auxiliadora \nPD: nadie fue tapado de la foto ajajajja."
     },
     {
         "id": 32,
-        "photo": "/src/assets/images/gallery-32.jpeg",
+        "photo": "/images/gallery-32.jpeg",
         "date": "2025-05-30",
         "note": "Noche de karaoke con amigos."
     },
     {
         "id": 33,
-        "photo": "/src/assets/images/gallery-33.jpeg",
+        "photo": "/images/gallery-33.jpeg",
         "date": "23/06/2022",
         "note": "Que foto tan linda de la caravana."
     },
     {
         "id": 34,
-        "photo": "/src/assets/images/gallery-34.jpeg",
+        "photo": "/images/gallery-34.jpeg",
         "date": "2025-05-30",
         "note": "Noche de karaoke con amigos."
     },
     {
         "id": 35,
-        "photo": "/src/assets/images/gallery-35.jpeg",
+        "photo": "/images/gallery-35.jpeg",
         "date": "06/08/2022",
         "note": "Ahora sí, todos juntos mientras invadiamo a jeanwil."
     },
     {
         "id": 36,
-        "photo": "/src/assets/images/gallery-36.jpeg",
+        "photo": "/images/gallery-36.jpeg",
         "date": "19/12/2023",
         "note": "Después de remojarnos 8h en mata gorda, lo más bellos en l foto."
     },
     {
         "id": 37,
-        "photo": "/src/assets/images/gallery-37.jpeg",
+        "photo": "/images/gallery-37.jpeg",
         "date": "",
         "note": "De las primeras reuniones con jeanwil y Angie 🫶🏻\nEse día lo mejor fue jeanwil con su corona."
     },
     {
         "id": 38,
-        "photo": "/src/assets/images/gallery-38.jpeg",
+        "photo": "/images/gallery-38.jpeg",
         "date": "2025-05-30",
         "note": "Noche de karaoke con amigos."
     },
     {
         "id": 39,
-        "photo": "/src/assets/images/gallery-39.jpeg",
+        "photo": "/images/gallery-39.jpeg",
         "date": "19/12/2023",
         "note": "El matriarcado y Ale (que ignoremos que llegó mareado y vomitando) ajajajajajaj."
     },
     {
         "id": 40,
-        "photo": "/src/assets/images/gallery-40.jpeg",
+        "photo": "/images/gallery-40.jpeg",
         "date": "2025-05-30",
         "note": "Noche de karaoke con amigos."
     },
     {
         "id": 41,
-        "photo": "/src/assets/images/gallery-41.jpeg",
+        "photo": "/images/gallery-41.jpeg",
         "date": "2025-05-30",
         "note": "Noche de karaoke con amigos."
     },
     {
         "id": 42,
-        "photo": "/src/assets/images/gallery-42.jpeg",
+        "photo": "/images/gallery-42.jpeg",
         "date": "2025-05-30",
         "note": "Noche de karaoke con amigos."
     },
     {
         "id": 43,
-        "photo": "/src/assets/images/gallery-43.jpeg",
+        "photo": "/images/gallery-43.jpeg",
         "date": "2025-05-30",
         "note": "Noche de karaoke con amigos."
     }
