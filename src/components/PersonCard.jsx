@@ -42,7 +42,10 @@ const PersonCard = ({ member }) => {
           }}
         >
           <img
-            src={member.photo}
+            src={(() => {
+              const base = import.meta.env.BASE_URL || '/';
+              return member.photo ? base + member.photo.replace(/^\/+/, '') : '';
+            })()}
             alt={member.name}
             style={{
               width: '100%',
@@ -80,7 +83,7 @@ const PersonCard = ({ member }) => {
               member.images.map((url, idx) => (
                 <img
                   key={idx}
-                  src={url}
+                  src={(() => (import.meta.env.BASE_URL || '/') + url.replace(/^\/+/, ''))()}
                   alt={`${member.name} pic ${idx + 1}`}
                   style={{
                     width: '100px',

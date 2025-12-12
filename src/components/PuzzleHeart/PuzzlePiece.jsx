@@ -70,7 +70,7 @@ const PuzzlePiece = ({ member, align = 'left', size }) => {
             <div style={{ width: AVATAR_SIZE, height: AVATAR_SIZE, flex: `0 0 ${AVATAR_SIZE}px`, position: 'relative' }}>
               {member?.photo ? (
                 <img
-                  src={member.photo}
+                  src={(() => (import.meta.env.BASE_URL || '/') + member.photo.replace(/^\/+/, ''))()}
                   alt={member.name}
                   style={{
                     width: '100%',
@@ -100,7 +100,7 @@ const PuzzlePiece = ({ member, align = 'left', size }) => {
 
               {member?.puzzlePiece ? (
                 <img
-                  src={member.puzzlePiece}
+                  src={(() => (import.meta.env.BASE_URL || '/') + member.puzzlePiece.replace(/^\/+/, ''))()}
                   alt={`${member.name} puzzle`}
                   style={{
                     position: 'absolute',

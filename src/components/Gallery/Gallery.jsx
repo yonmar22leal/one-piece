@@ -6,14 +6,17 @@ const Gallery = ({ gallery }) => {
 
   const handleImageClick = (id) => {
     if (zoomedId === id) {
-      // Si ya está zoomed, alterna flip
+      // Si ya está con zoom, alterna el flip
       setFlippedId(flippedId === id ? null : id);
     } else {
-      // Si no está zoomed, set zoom y limpia flip
+      // Si no está con zoom, activa zoom y limpia flip
       setZoomedId(id);
       setFlippedId(null);
     }
   };
+
+  // Base para que funcione en dev ("/") y en GH Pages ("/one-piece/")
+  const base = import.meta.env.BASE_URL || '/';
 
   return (
     <section className="heart-gallery-container" style={{ marginTop: '2rem' }}>
@@ -28,7 +31,10 @@ const Gallery = ({ gallery }) => {
           >
             <div className="card-inner">
               <div className="card-front">
-                <img src={m.photo} alt={m.id} />
+                <img
+                  src={base + m.photo.replace(/^\/+/, '')}
+                  alt={m.note || m.id}
+                />
                 <div className="heart-gallery-caption">{m.date}</div>
               </div>
               <div className="card-back">
@@ -38,7 +44,16 @@ const Gallery = ({ gallery }) => {
           </div>
         ))}
       </div>
-      {zoomedId && <div className="overlay" onClick={() => { setZoomedId(null); setFlippedId(null); }} />}
+
+      {zoomedId && (
+        <div
+          className="overlay"
+          onClick={() => {
+            setZoomedId(null);
+            setFlippedId(null);
+          }}
+        />
+      )}
     </section>
   );
 };
