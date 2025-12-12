@@ -46,6 +46,8 @@ function BackgroundAudio() {
     }
   }, [])
 
+  const base = import.meta.env.BASE_URL || '/';
+
   return (
     <>
       <audio
@@ -54,8 +56,8 @@ function BackgroundAudio() {
         volume="0.2"
         preload="metadata"
       >
-        <source src="/audio/one-piece-theme2.mp3" type="audio/mpeg" />
-        <source src="/audio/one-piece-theme2.ogg" type="audio/ogg" />
+        <source src={`${base}audio/one-piece-theme2.mp3`} type="audio/mpeg" />
+        <source src={`${base}audio/one-piece-theme2.ogg`} type="audio/ogg" />
         Tu navegador no soporta audio.
       </audio>
 
