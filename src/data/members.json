@@ -1,17 +1,82 @@
 [
-  { "id": 1, "name": "Sami", "photo": "images/sami.jpeg", 
-  "desc": "Querida Sami,No puedo evitar sonreír al recordar la primera vez que nos cruzamos. Era el primer día de segundo año, y Daniela, super preocupada, me había preparado para hablarte, asegurándome que estarías sola (¡ja!). Estábamos en el salón de abajo; tú, sentada frente a mí, hablando con Mariandys. Fue allí cuando te pregunté:¿Tu Eres Samantha? Y tú, con esa risa que te caracteriza, respondiste:Y tú eres Valeria, supongo (¡jajaja!). Sin saberlo, ese fue el inicio de una amistad que valoro profundamente y que llena mi vida de felicidad 🥹. Sami, admiro tanto tu disposición SIEMPRE, tu sinceridad y tu lealtad. Sé que en las buenas y en las malas, siempre estás ahí, y eso significa el mundo para mí 🩷. Tienes un corazón enorme, y estoy infinitamente agradecida por ser y estar siempre a mi lado. Con cariño,Valeria",
-  "puzzlePiece":"images/1.webp",
-  "color":"#FADADD" },
-  { "id": 2, "name": "Angie", "photo": "images/Angie.jpeg", 
-  "desc": "Querida Angie (corazón no sé de qué color) :Recuerdo la primera vez que nos conocimos como amigas... Siempre te había visto en el colegio durante primaria, recuerdo estudiamos juntas un grado, pero luego fuiste siempre chica de la A y la C jjajaja Angie, fue esas veces en 5to año, dónde tú y el abuelo sin saberlo, sin planearlo, sin esperarlo (ustedes tenían un grupo) conectaron con nosotros La conexión más linda y las piezas necesarias para completar nuestro rompecabezas de ONE PIECE 🥺 Desde entonces te convertiste en los abrazos más sinceros, reconfortantes y amados del grupo, esa amiga que puede ser el pañito de lágrimas y siempre estará dispuesta a dar todo de ella, gracias por eso y te admiramos muchísimo a mi amiga Snoopy (porque a parte de que te encanta) nos expresas tu cariño y emociones muchas veces sin necesidad de palabras 🥺🤍" , 
-  "puzzlePiece":"images/2.webp",
-  "color":"#D0E8F2" },
-  { "id": 3, "name": "Lucía", "photo": "images/lucia.webp", "desc": "La creativa" , "puzzlePiece":"images/puzzle-3.png", "color":"#FDE2E4" },
-  { "id": 4, "name": "Juan", "photo": "images/juan.jpg", "desc": "El estratega" , "puzzlePiece":"images/puzzle-4.png", "color":"#E2F0CB" },
-  { "id": 5, "name": "Sofía", "photo": "images/sofia.webp", "desc": "La optimista" , "puzzlePiece":"images/5.webp", "color":"#FFF1E6" },
-  { "id": 6, "name": "Miguel", "photo": "images/miguel.jpg", "desc": "El bromista" , "puzzlePiece":"images/puzzle-6.png", "color":"#CDEAC0" },
-  { "id": 7, "name": "Ana", "photo": "images/ana.webp", "desc": "La soñadora" , "puzzlePiece":"images/puzzle-7.png", "color":"#F9E0E4" },
-  { "id": 8, "name": "Luis", "photo": "images/luis.avif", "desc": "El protector" , "puzzlePiece":"images/8.png", "color":"#D0F4DE" },
-  { "id": 9, "name": "Valeria", "photo": "images/valeria.webp", "desc": "La valiente" , "puzzlePiece":"images/puzzle-9.png", "color":"#E3FDFD" }
+  {
+    "id": 1,
+    "name": "Daniela",
+    "photo": "images/dani.jpeg",
+    "photoDesc": "📸 Mi Dani en su mejor momento, capturando esa sonrisa que ilumina todo 💜",
+    "photos": ["images/gallery-1.jpeg", "images/gallery-2.jpeg", "images/gallery-3.jpeg"],
+    "desc": "Mi bella y querida Dani 💜, Recuerdo cuando nos conocimos, es inevitable sonreír y se me pone el corazón chiquito al recordarlo y ver hasta donde hemos llegado 🥺, Mi Dani, fue en esa mesa de preescolar, con la profe María, cuando quedaste a mi lado en los primeros días, cortamos juntas y dibujamos juntas (obvio a ti te salió mejor eso de las manualidades) desde entonces mi Dani, han sido minutos, horas, días, semanas, meses e incluso años vividos y compartidos... Si consideramos que en promedio son 200 días al año las clases, desde 3er nivel hasta graduarnos convivimos 2400 días 🥺 solo éramos dos niñas jugando y comiendo juntas, y desde ese momento fuimos inseparables, Hoy me siento muy agradecida con Dios y la vida porque hace 15 años conocí la verdadera amistad 🥹💜 una amiga real, en toda su palabra y definición, con altos y bajos en nuestra amistad, anécdotas, historias, risas, lágrimas, abrazos, palabras, cartas, regaños y chismes ajajajaj te amo con todo mi corazón, Si hay algo que admiro de ti, es tu lindo corazón Dani, cómo amas, te preocupas por los demás y ese corazón de pollito tierno y lleno de amor 🥺💜, Gracias por tanto, por soportarme en la etapa de 1ero y 2do grado ajjaja dónde ni yo me soportaba, por quedarte en mis mejores y peores momentos, por ser luz en mi vida, durante la infancia, adolescencia y ahora adultas chiquitas jajajaja que sean muchos años más todos juntos. Te amo mi dani💜",
+    "puzzlePiece": "images/1.webp",
+    "color": "#800080"
+  },
+  {
+    "id": 2,
+    "name": "Gaby",
+    "photo": "images/gaby.jpeg",
+    "photoDesc": "📸 Gaby con esa mirada valiente que conquista cualquier desafío ♥️🩶",
+    "photos": ["images/gallery-4.jpeg", "images/gallery-5.jpeg", "images/gallery-6.jpeg"],
+    "desc": "Querida Gaby♥️🩶🖤. Como olvidar cuando nos conocimos? fue cuando tú muy feliz de estudiar en la mañana (jajajajaaj porque el colegio dejó la tarde para media general) llegaste a nuestra sección ☺️. Gaby sin saberlo conectamos todas, Dani, vale, tu y yo (ignoremos a suseilyn jajaa) con personalidades totalmente distintas, Pero nos hicimos parte una de la otra, compartimos nuestros momentos de primaria, adolescencia, risas, memes, bachiller, etapa Tumblr y de Wattpad jajajajaja y hemos llegado aqui.... Una verdadera amistad TODOS. Si hay algo que admiro de ti es tu Valentia, que no importa lo mucho que te asuste algo o lo difícil, tu lo haces♥️ me enseñaste el valor de los nuevos comienzos. Te aprecio y amo muchísimo Gaby",
+    "puzzlePiece": "images/2.webp",
+    "color": "#5C1E1E"
+  },
+  {
+    "id": 3,
+    "name": "Alejandro",
+    "photo": "images/alejandro.jpeg",
+    "photoDesc": "📸 El macho alfa del grupo, siempre listo para cuidar a todos 💙",
+    "photos": ["images/gallery-7.jpeg", "images/gallery-8.jpeg", "images/gallery-9.jpeg"],
+    "desc": "Querido Alejandro 💙 O como me gusta llamarte, animal del monte..... Me lo has preguntado muchas veces, cuando fue la primera vez que fuimos amigos, nunca hemos dado con la respuesta exacta, realmente sé que fue entre 1ero y 2do año cuando empezamos a hablar entre tu grupo y nosotras, y la amistad inició cuando yo de entrepita te preguntaba quien te gustaba (para ayudarte) y sin saberlo ajjsaj era la persona indicada para hacerlo, sip todo empezó yo de alcahueta 🤭 cabe resaltar que me caiste muy bien al inicio como para yo quererte incluso ayudarte a conquistar a mi niña.... Desde entonces fuimos compañeros entre grupos, y en 4to un día Sami dijo para agregarte a un grupo de clase y yo sin conocer al alto que estaba al lado (tu, pero alto jajajajaja) dijimos que si Y desde entonces te convertiste en el *macho alfa* del grupo 🥺 mi mejor amigo, y que pase lo que pase está allí 💙 Animal, si hay algo que admiro de ti, es lo buen amigo, hijo, hermano y persona que eres 🥺 gracias por estar siempre para mí y para todas Gracias por ser nuestro apoyo, el que se mantuvo firme y nos cuidó a todas este año, y lo seguirás haciendo como siempre 🥺 Admiro como te preocupas por los que amas, y siempre estás bien para poder ayudarnos 💙 Gracias por todo, a mi amigo con dos trabajos jajajaja 💙 loviu animal del monte",
+    "puzzlePiece": "images/puzzle-3.png",
+    "color": "#4169E1"
+  },
+  {
+    "id": 4,
+    "name": "Sami",
+    "photo": "images/sami.jpeg",
+    "photoDesc": "Sami, si escogí la foto más linda ajajaja porque me transmite en lo que nos hemos convertido 🥺🩷 a pesar de todo, ese día sin luz, tarde, cansadasss a morir y muy tristes, Pero aún así siendo fuertes, valientes y bellas jajaj",
+    "photos": ["images/gallery-10.jpeg", "images/gallery-12.jpeg", "images/gallery-13.jpeg"],
+    "desc": "Querida Sami, No puedo evitar sonreír al recordar la primera vez que nos cruzamos. Era el primer día de segundo año, y Daniela, super preocupada, me había preparado para hablarte, asegurándome que estarías sola (¡ja!). Estábamos en el salón de abajo; tú, sentada frente a mí, hablando con Mariandys. Fue allí cuando te pregunté: ¿Tu Eres Samantha? Y tú, con esa risa que te caracteriza, respondiste: Y tú eres Valeria, supongo (¡jajaja!). Sin saberlo, ese fue el inicio de una amistad que valoro profundamente y que llena mi vida de felicidad 🥹. Sami, admiro tanto tu disposición SIEMPRE, tu sinceridad y tu lealtad. Sé que en las buenas y en las malas, siempre estás ahí, y eso significa el mundo para mí 🩷. Tienes un corazón enorme, y estoy infinitamente agradecida por ser y estar siempre a mi lado. Con cariño, Valeria",
+    "puzzlePiece": "images/1.webp",
+    "color": "#FFC0CB"
+  },
+  {
+    "id": 5,
+    "name": "Angela",
+    "photo": "images/angela.jpeg",
+    "photoDesc": "📸 Ángela, la futura doctora del grupo con su perseverancia infinita 💙",
+    "photos": ["images/gallery-11.jpeg", "images/gallery-14.jpeg", "images/gallery-15.jpeg"],
+    "desc": "Querida Ángela, Pienso y rio al recordar la primera vez que supe que eras parte del grupo, y que siempre lo serías. Fue en un recreo cualquiera, nosotras sentadas, hablando de mil cosas locas a la vez jjaja. Y de repente, comenzamos a hablar. Sé que al principio sentías que tenías que encajar, pero amiga, ser tú misma siempre fue más que suficiente. 🥺 Tengo tantos recuerdos en el colegio, y cada uno de ellos me lleva a lo que más admiro de ti: tu perseverancia, tu dedicación y tu increíble inteligencia. Ángela, me has enseñado a enfocarme en mis sueños y a creer que todo es posible si luchamos por ello. Eres la más inteligente y, sin duda, la futura doctora del grupo. 💙 Te aprecio y amo muchísimo. 🫶🏻 PD: por favor más clases de salsa Jajajaja.",
+    "puzzlePiece": "images/puzzle-5.png",
+    "color": "#9370DB"
+  },
+  {
+    "id": 6,
+    "name": "Jeanwil",
+    "photo": "images/Jeanwil.jpeg",
+    "photoDesc": "📸 Nuestro querido abuelo Jeanwil, el que completa nuestro ONE PIECE 💚",
+    "photos": ["images/gallery-16.jpeg", "images/gallery-17.jpeg", "images/gallery-18.jpeg"],
+    "desc": "Querido abuelo💚 Recuerdo que siempre estudiaste con nosotras.... Pero al igual que Angie, sin planearlo o esperarlo, un día cualquiera conectaron con nosotros 🥺 Las últimas piezas de este ONE PIECE Desde entonces fuistes esas risas, consejos y cuidador de nosotros, cómo ese abuelo🤭 Jeanwil eres parte de nosotros, gracias a ti somos ONE PIECE, nos diste un nombre y nos enseñaste que verdadero tesoro de unos AMIGOS Admiro tu capacidad de enfrentar la vida 🥺 pase lo que pase y por muchos cambios que tengas, lo haces con una sonrisa Te extraño muchísimo, (todos los hacemos) pero eres tu quien comprara la casa para vivir todos ajajajja Gracias por todo abuelo 💚 loviu",
+    "puzzlePiece": "images/puzzle-6.png",
+    "color": "#228B22"
+  },
+  {
+    "id": 7,
+    "name": "Angie",
+    "photo": "images/Angie.jpeg",
+    "photoDesc": "Angie, la foto mas reciente pero me recuerda que siempre estarás para mí,para ser mi hombro, compañía y lo mucho que amo y me reconfortan tus abrazos",
+    "photos": ["images/gallery-19.jpeg", "images/gallery-20.jpeg", "images/gallery-21.jpeg"],
+    "desc": "Querida Angie (corazón no sé de qué color) : Recuerdo la primera vez que nos conocimos como amigas... Siempre te había visto en el colegio durante primaria, recuerdo estudiamos juntas un grado, pero luego fuiste siempre chica de la A y la C jjajaja Angie, fue esas veces en 5to año, dónde tú y el abuelo sin saberlo, sin planearlo, sin esperarlo (ustedes tenían un grupo) conectaron con nosotros La conexión más linda y las piezas necesarias para completar nuestro rompecabezas de ONE PIECE 🥺 Desde entonces te convertiste en los abrazos más sinceros, reconfortantes y amados del grupo, esa amiga que puede ser el pañito de lágrimas y siempre estará dispuesta a dar todo de ella, gracias por eso y te admiramos muchísimo a mi amiga Snoopy (porque a parte de que te encanta) nos expresas tu cariño y emociones muchas veces sin necesidad de palabras 🥺🤍",
+    "puzzlePiece": "images/2.webp",
+    "color": "#5C1E1E"
+  },
+  {
+    "id": 8,
+    "name": "Valeria",
+    "photo": "images/valeria.jpeg",
+    "photoDesc": "📸 Vale con esa luz especial que siempre nos acompaña 💛",
+    "photos": ["images/gallery-22.jpeg", "images/gallery-23.jpeg", "images/gallery-24.jpeg"],
+    "desc": "Querida Vale💛 Recuerdo la primera vez que nos conocimos, ese día cambió todo. Tu energía y tu forma de ser tan auténtica hicieron que conectáramos al instante. Hemos compartido tantas aventuras, risas interminables y momentos que guardaré por siempre en el corazón. Admiro tu pasión por la vida y cómo siempre encuentras la forma de hacer felices a todos los que te rodean. Gracias por ser esa amiga que ilumina todo. Te quiero muchísimo 💛",
+    "puzzlePiece": "images/puzzle-8.png",
+    "color": "#C8A2C8"
+  }
 ]

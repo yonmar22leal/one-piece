@@ -26,12 +26,17 @@
 }
 
 .puzzle-piece-vertical.left {
-  padding-left: 2.5rem;
+
+  color: aliceblue;
 }
 .puzzle-piece-vertical.right {
-  padding-right: 2.5rem;
+
+  color: aliceblue;
 }
 
+.desc-animation span{
+  color: white;
+}
 
 .puzzle-piece-vertical .placeholder {
   font-weight: 700;
