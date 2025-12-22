@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './PuzzleGridHeart.css';
 
-const PuzzleGridHeart = () => {
+const PuzzleGridHeart = ({ allActivated }) => {
   const [pulse, setPulse] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -28,7 +28,7 @@ const PuzzleGridHeart = () => {
 
       <div className="heart-image-wrapper">
         <img
-          src="/images/corazon-completo.png"
+          src={allActivated ? "/images/corazon-completo.png" : "/images/corazon-incompleto.png"}
           alt="Corazón armado completo"
           className={`heart-full-img ${pulse ? 'clicked' : ''}`}
           onClick={handleClick}

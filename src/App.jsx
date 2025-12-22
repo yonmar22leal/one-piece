@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './styles/main.css'
 import PuzzleHeart from './components/PuzzleHeart/PuzzleHeart'
 import members from './data/members.json'
@@ -11,6 +11,14 @@ import BackgroundAudio from './components/BackgroundAudio.jsx'
 
 
 function App() {
+  const [activatedPieces, setActivatedPieces] = useState(new Set());
+
+  const activatePiece = (id) => {
+    setActivatedPieces(prev => new Set([...prev, id]));
+  };
+
+  const allActivated = activatedPieces.size === members.length;
+
   return (
     <div className="App">
       <BackgroundAudio />
@@ -21,8 +29,8 @@ function App() {
 
       <main>
         <TittleAnimate text="titulo animado" />
-        <PuzzleHeart members={members} />
-        <PuzzleGridHeart members={members} />
+        <PuzzleHeart members={members} activatedPieces={activatedPieces} activatePiece={activatePiece} />
+        <PuzzleGridHeart members={members} allActivated={allActivated} />
         <Gallery gallery={gallery} />
       </main>
 

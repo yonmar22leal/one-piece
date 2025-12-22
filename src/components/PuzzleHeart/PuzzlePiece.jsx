@@ -5,7 +5,13 @@ import Gallery from './Gallery';
 
 const DEFAULT_AVATAR_SIZE = 320;
 
-const PuzzlePiece = ({ member, align = 'left', size }) => {
+const PuzzlePiece = ({ 
+  member, 
+  align = 'left', 
+  size, 
+  activated, 
+  onActivate
+}) => {
   const AVATAR_SIZE = typeof size === 'number' && size > 0 ? size : DEFAULT_AVATAR_SIZE;
   const BADGE_SIZE = Math.round(AVATAR_SIZE * 0.55);
   const BADGE_OFFSET = Math.round(AVATAR_SIZE * 0.12);
@@ -14,22 +20,41 @@ const PuzzlePiece = ({ member, align = 'left', size }) => {
   const [showPhotoDesc, setShowPhotoDesc] = useState(false);
   const [isFlipped, setIsFlipped] = useState(false);
   const [typedText, setTypedText] = useState('');
+  const [animating, setAnimating] = useState(false);
+  const [puzzlePieceVisible, setPuzzlePieceVisible] = useState(true); // ← Controla SOLO la pieza puzzle
+
+  const handlePuzzleClick = () => {
+    if (!puzzlePieceVisible || animating) return;
+    
+    setAnimating(true);
+    onActivate?.(member);
+    
+    // Solo el badge desaparece con efecto (la tarjeta completa queda)
+    setTimeout(() => {
+      setPuzzlePieceVisible(false);
+      setAnimating(false);
+    }, 500);
+  };
 
   const handleDescButtonClick = (e) => {
     e.stopPropagation();
-    setShowDesc((prev) => !prev);
-    if (showDesc) setTypedText('');
+    setShowDesc((prev) => {
+      const newState = !prev;
+      if (!newState) setTypedText('');
+      return newState;
+    });
   };
 
   const handleFlipClick = (e) => {
     e.stopPropagation();
     setIsFlipped((prev) => !prev);
-    // al voltear limpiamos otros estados
+    // Limpiar estados al voltear
     setShowPhotoDesc(false);
     setShowDesc(false);
     setTypedText('');
   };
 
+  // Typewriter effect para descripción
   useEffect(() => {
     if (!showDesc) return;
     let i = 0;
@@ -79,7 +104,7 @@ const PuzzlePiece = ({ member, align = 'left', size }) => {
       title={member?.name}
       style={{ ...containerStyle, ...flipStyle }}
     >
-      {/* BOTÓN VOLTEAR */}
+      {/* Botón voltear */}
       <button
         onClick={handleFlipClick}
         style={{
@@ -99,28 +124,47 @@ const PuzzlePiece = ({ member, align = 'left', size }) => {
           display: 'flex',
           alignItems: 'center',
           color: 'black',
-          justifyContent: 'center'
+          justifyContent: 'center',
+          opacity: animating ? 0.3 : 1,
+          transition: 'opacity 0.2s ease',
+          pointerEvents: animating ? 'none' : 'auto'
         }}
         title={isFlipped ? 'Volver' : 'Ver fotos'}
       >
         {isFlipped ? '↶' : '↻'}
       </button>
 
-      {/* FRENTE: foto principal + nombre + descripción */}
+      {/* Frente: Avatar + Info */}
       {!isFlipped && (
         <>
-          <Avatar member={member} showPhotoDesc={showPhotoDesc} setShowPhotoDesc={setShowPhotoDesc} AVATAR_SIZE={AVATAR_SIZE} BADGE_SIZE={BADGE_SIZE} BADGE_OFFSET={BADGE_OFFSET} getImageSrc={getImageSrc} />
-
-          <Info member={member} showDesc={showDesc} typedText={typedText} handleDescButtonClick={handleDescButtonClick} />
+          <Avatar 
+            member={member} 
+            showPhotoDesc={showPhotoDesc} 
+            setShowPhotoDesc={setShowPhotoDesc} 
+            AVATAR_SIZE={AVATAR_SIZE} 
+            BADGE_SIZE={BADGE_SIZE} 
+            BADGE_OFFSET={BADGE_OFFSET} 
+            getImageSrc={getImageSrc} 
+            activated={activated} 
+            animating={animating} 
+            onPuzzleClick={handlePuzzleClick}
+            puzzlePieceVisible={puzzlePieceVisible}
+            setPuzzlePieceVisible={setPuzzlePieceVisible}
+          />
+          <Info 
+            member={member} 
+            showDesc={showDesc} 
+            typedText={typedText} 
+            handleDescButtonClick={handleDescButtonClick}
+            animating={animating}
+          />
         </>
       )}
 
-      {/* REVERSO: SOLO GALERÍA CON member.photos */}
-{isFlipped && member?.photos && member.photos.length > 0 && (
-  <Gallery member={member} getImageSrc={getImageSrc} />
-)}
-
-
+      {/* Reverso: Galería de fotos */}
+      {isFlipped && member?.photos && member.photos.length > 0 && (
+        <Gallery member={member} getImageSrc={getImageSrc} animating={animating} />
+      )}
 
       <style jsx>{`
         @keyframes blink {
