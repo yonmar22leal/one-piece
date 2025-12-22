@@ -43,37 +43,6 @@
   100% { transform: scale(1) rotate(0deg); filter: brightness(1); }
 }
 
-/* Modal / gallery styles */
-.heart-modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-.heart-modal-content {
-  max-height: 85vh;
-  background: #fff;
-  border-radius: 12px;
-  padding: 18px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.28);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-
-
-}
-.modal-close {
-  border: none;
-  background: transparent;
-  font-size: 28px;
-  line-height: 1;
-  margin-left: auto;
-  cursor: pointer;
-}
-
 /* Mobile-first: base para teléfono */
 .puzzle-piece-vertical {
   width: 100%;
@@ -105,6 +74,53 @@
   flex: 1;
   text-align: center;
 }
+
+.heart-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(6px);
+}
+
+.heart-modal-content {
+  background: #fff;
+  border-radius: 24px;
+  padding: 1.5rem;
+  max-width: 95vw;
+  max-height: 95vh;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.8rem;
+  right: 1.2rem;
+  font-size: 2rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #666;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+
+.heart-modal-image {
+  max-width: 100%;
+  max-height: 110vh;
+  display: block;
+  border-radius: 18px;
+}
+
 
 /* TABLET Y DESKTOP */
 @media (min-width: 768px) {
