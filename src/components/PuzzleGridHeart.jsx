@@ -41,9 +41,9 @@ const PuzzleGridHeart = ({ allActivated }) => {
               : getImageSrc('corazon-incompleto.png')
           }
           alt="Corazón armado completo"
-          className={`heart-full-img ${allActivated ? 'complete' : ''}`}
+          className={`heart-full-img ${allActivated ? 'complete' : 'incomplete'}`}
           onClick={handleClick}
-          style={{ cursor: allActivated ? 'pointer' : 'default' }} // ✅ Solo parece clicable cuando está completo
+          style={{ cursor: allActivated ? 'pointer' : 'default' }}
         />
       </div>
 

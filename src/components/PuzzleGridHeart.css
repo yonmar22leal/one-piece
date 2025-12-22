@@ -18,12 +18,19 @@
   margin: 0 auto;
   border-radius: 20px;
   object-fit: contain;
-  /* Animación DESACTIVADA por defecto */
 }
 
+/* Cuando está completo */
 .heart-full-img.complete {
+  filter: sepia(0.3) saturate(2.5) hue-rotate(262deg) brightness(1.2);
   animation: heartBeat 1.5s infinite cubic-bezier(.4,0,.6,1);
 }
+
+/* Cuando está incompleto */
+.heart-full-img.incomplete {
+  filter: sepia(1.3) saturate(2.5) hue-rotate(261deg) brightness(0.2);
+}
+
 
 @keyframes heartBeat {
   0% { transform: scale(1); }
