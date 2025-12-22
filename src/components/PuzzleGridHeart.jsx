@@ -12,7 +12,7 @@ const PuzzleGridHeart = ({ allActivated }) => {
   };
 
   const handleClick = () => {
-    if (!allActivated) return;      // ✅ Solo si está completo
+    if (!allActivated) return;      
     setModalOpen(true);
   };
 

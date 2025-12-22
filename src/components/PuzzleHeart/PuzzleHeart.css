@@ -20,7 +20,6 @@
   padding: 1.1rem 0.5rem;
   transition: transform 0.32s cubic-bezier(.69,-0.03,.49,1.38), box-shadow .3s;
   will-change: transform, box-shadow;
-  /* ✅ SIEMPRE NORMAL - sin rotación inicial */
   transform: rotate(0deg);
 }
 
@@ -119,7 +118,6 @@
   padding: 1rem 0.5rem;
 }
 
-/* Desktop: fila y alternancia izquierda/derecha */
 @media (min-width: 768px) {
   .puzzle-piece-vertical {
     flex-direction: row;
@@ -129,12 +127,12 @@
   }
 
   .puzzle-piece-vertical.left {
-    flex-direction: row;        /* imagen izquierda, texto derecha */
+    flex-direction: row;
     text-align: left;
   }
 
   .puzzle-piece-vertical.right {
-    flex-direction: row-reverse; /* imagen derecha, texto izquierda */
+    flex-direction: row-reverse; 
     text-align: right;
   }
 

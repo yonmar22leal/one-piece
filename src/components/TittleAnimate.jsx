@@ -26,7 +26,7 @@ function TittleAnimate() {
 
       {/* “Imagen” del PDF */}
       <img
-        src="/images/portada2.png"  // portada convertida desde tu PDF
+        src="/images/portada2.png" 
         alt="Portada del PDF de recuerdos"
         style={{
           maxWidth: '100%',

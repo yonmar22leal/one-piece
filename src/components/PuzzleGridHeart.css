@@ -53,7 +53,7 @@
 .puzzle-piece-vertical {
   width: 100%;
   padding: 1rem 0.5rem;
-  flex-direction: column !important; /* ✅ Móvil: columna */
+  flex-direction: column !important;
   align-items: center !important;
   text-align: center;
   transition: transform 0.3s;
@@ -62,7 +62,7 @@
 /* Avatar responsive */
 .puzzle-piece-vertical .avatar-container {
   width: 100%;
-  max-width: 200px; /* ✅ Móvil: máximo 200px */
+  max-width: 200px;
   height: 200px;
   position: relative;
   margin: 0 auto 1rem;

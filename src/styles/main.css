@@ -75,7 +75,7 @@ body {
   inset: 0;
   overflow: hidden;
   pointer-events: none;
-  z-index: 999;  /* ya no -1 */
+  z-index: 999; 
 }
 
 /* Cada corazón */
