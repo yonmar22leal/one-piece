@@ -2,7 +2,7 @@ const HeartComponent = ({ isComplete }) => {
   return (
     <div className="heart-container">
       <img
-        src="/images/corazon-completo.png"
+        src="/one-piece/images/corazon-completo.png"
         alt="Corazón completo"
         className="heart-full-img"
         style={{
