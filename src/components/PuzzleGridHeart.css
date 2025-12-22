@@ -2,7 +2,6 @@
   max-width: 650px;
   margin: 3.6rem auto 0 auto;
   padding: 0;
-  background: linear-gradient(135deg, #fdedf6 0%, #daf3fe 100%);
   border-radius: 40px;
   box-shadow: 0 20px 70px #cdf4f444;
 }
@@ -116,6 +115,7 @@
   cursor: pointer;
   color: #666;
 }
+
 
 .modal-close:hover {
   color: #000;

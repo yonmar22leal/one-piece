@@ -22,17 +22,6 @@ const PuzzleGridHeart = ({ allActivated }) => {
 
   return (
     <section className="heart-3x3-container">
-      <h2
-        style={{
-          textAlign: 'center',
-          fontWeight: '700',
-          fontSize: '2rem',
-          marginBottom: '1.5rem',
-        }}
-      >
-        Nuestro corazón completo
-      </h2>
-
       <div className="heart-image-wrapper">
         <img
           src={

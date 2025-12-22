@@ -8,6 +8,7 @@ import gallery from './data/gallery.json'
 import './components/Gallery/Gallery.css'
 import TittleAnimate from './components/TittleAnimate.jsx'
 import BackgroundAudio from './components/BackgroundAudio.jsx'
+import TenderBackground from './components/TenderBackground.jsx'
 
 
 function App() {
@@ -20,14 +21,11 @@ function App() {
   const allActivated = activatedPieces.size === members.length;
 
   return (
-    <div className="App">
+    <div className="App"> 
+      
       <BackgroundAudio />
-
-      <header style={{padding: '2rem 0'}}>
-        <h1 style={{fontSize: '2.6rem', margin: 0}}>Mi página — One Piece</h1>
-      </header>
-
       <main>
+        <TenderBackground /> 
         <TittleAnimate text="titulo animado" />
         <PuzzleHeart members={members} activatedPieces={activatedPieces} activatePiece={activatePiece} />
         <PuzzleGridHeart members={members} allActivated={allActivated} />
