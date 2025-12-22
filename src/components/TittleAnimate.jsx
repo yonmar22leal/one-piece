@@ -1,12 +1,25 @@
-
-import { TypeAnimation } from 'react-type-animation'
+import { TypeAnimation } from 'react-type-animation';
 
 function TittleAnimate() {
+  const getImageSrc = (filename) => {
+    if (window.location.pathname.includes('/one-piece/')) {
+      return `/one-piece/images/${filename}`;
+    }
+    return `/images/${filename}`;
+  };
+
   return (
-    <div style={{ textAlign: 'center', marginBottom: '1.5em', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      
-      <header style={{padding: '2rem 0'}}>
-        <h1 style={{fontSize: '2.6rem', margin: 0}}>One Piece</h1>
+    <div
+      style={{
+        textAlign: 'center',
+        marginBottom: '1.5em',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+      }}
+    >
+      <header style={{ padding: '2rem 0' }}>
+        <h1 style={{ fontSize: '2.6rem', margin: 0 }}>One Piece</h1>
       </header>
 
       <TypeAnimation
@@ -24,9 +37,9 @@ function TittleAnimate() {
         repeat={0}
       />
 
-      {/* “Imagen” del PDF */}
+      {/* Imagen portada compatible dev + GH Pages */}
       <img
-        src="/images/portada2.png" 
+        src={getImageSrc('portada2.png')}
         alt="Portada del PDF de recuerdos"
         style={{
           maxWidth: '100%',
@@ -37,7 +50,7 @@ function TittleAnimate() {
         }}
       />
     </div>
-  )
+  );
 }
 
-export default TittleAnimate
+export default TittleAnimate;
