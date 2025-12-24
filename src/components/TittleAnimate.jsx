@@ -39,7 +39,7 @@ function TittleAnimate() {
 
       {/* Imagen portada compatible dev + GH Pages */}
       <img
-        src={getImageSrc('portada2.png')}
+        src={getImageSrc('portada3.png')}
         alt="Portada del PDF de recuerdos"
         style={{
           maxWidth: '100%',
