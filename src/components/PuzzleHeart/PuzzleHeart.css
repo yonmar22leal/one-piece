@@ -1,9 +1,11 @@
 .puzzle-heart {
   border-radius: 30px;
-  box-shadow: 0 16px 56px #c1cff533;
   position: relative;
   overflow: hidden;
+  
 }
+
+
 
 .heart-list {
   display: flex;
@@ -41,10 +43,6 @@
   font-size: 2rem;
 }
 
-.puzzle-piece-vertical img {
-  transition: box-shadow .3s, filter .24s;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-}
 
 /* En PuzzleHeart.css o global.css */
 .heart-container {

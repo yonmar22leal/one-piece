@@ -165,29 +165,41 @@ const Avatar = ({
       opacity: 1;
     }
     20% {
-      transform: scale(1.3) translate(10px, 15px);  /* ← ABAJO */
+      transform: scale(1.3) translate(10px, 15px);
       opacity: 0.9;
       filter: drop-shadow(0 0 10px #ffd700);
     }
     60% {
-      transform: scale(1.1) translate(40px, 60px);  /* ← MÁS ABAJO */
+      transform: scale(1.1) translate(40px, 60px);
       opacity: 0.7;
       filter: drop-shadow(0 0 20px #ffed4a);
     }
     100% {
-      transform: scale(0.3) translate(120px, 150px); /* ← FUERTE ABAJO */
+      transform: scale(0.3) translate(120px, 150px);
       opacity: 0;
       filter: drop-shadow(0 0 30px #ffffff);
     }
   }
 
   .puzzle-badge {
-    transition: all 0.2s ease;
+    transition: all 0.3s ease-in-out;
+    /* FILTRO EXACTO que pediste */
+    ;
+  }
+
+  .puzzle-badge img {
+  filter: sepia(1.3) saturate(2.5) hue-rotate(261deg) brightness(0.2);
+  }
+
+  .puzzle-badge img:hover {
+  filter: sepia(0.3) saturate(2.5) hue-rotate(262deg) brightness(1.2);
   }
 
   .puzzle-badge:not(.shooting-star):hover {
-    transform: scale(1.05);
-    filter: brightness(1.1);
+    /* Cambio de color en hover - resetea filtros y cambia tonos */
+    filter: sepia(0) saturate(1.8) hue-rotate(0deg) brightness(1.4);
+    transform: scale(1.08) rotate(5deg);
+    filter: drop-shadow(0 4px 12px rgba(147, 51, 234, 0.4));
   }
 
   .puzzle-badge.shooting-star {
@@ -195,10 +207,11 @@ const Avatar = ({
     pointer-events: none !important;
   }
 
-  .avatar-container button:hover:not([disabled]) {
+  .avatar-container button:hover:not([disabled]):not(.puzzle-badge) {
     background: rgba(255,255,255,0.1);
   }
 `}</style>
+
 
     </div>
   );

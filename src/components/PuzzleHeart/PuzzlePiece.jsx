@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Avatar from './Avatar';
 import Info from './Info';
 import Gallery from './Gallery';
+import './PuzzleHeart.css';
 
 const DEFAULT_AVATAR_SIZE = 320;
 
