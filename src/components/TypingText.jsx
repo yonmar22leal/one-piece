@@ -5,17 +5,18 @@ function TypingText({ text, speed = 50, start }) {
   const hasFinished = useRef(false)
 
   useEffect(() => {
+    // Si aún no se debe comenzar o ya terminó, no hacemos nada
     if (!start || hasFinished.current) return
 
     let i = 0
-    setDisplayed('') 
+    setDisplayed('') // limpia por si acaso
 
     const interval = setInterval(() => {
       setDisplayed(prev => prev + text.charAt(i))
       i++
       if (i >= text.length) {
         clearInterval(interval)
-        hasFinished.current = true
+        hasFinished.current = true     // marcamos como completado
       }
     }, speed)
 

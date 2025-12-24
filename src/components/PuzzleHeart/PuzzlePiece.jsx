@@ -60,7 +60,7 @@ const PuzzlePiece = ({
     if (!showDesc) return;
     let i = 0;
     const text = member?.desc || '';
-    const speed = 40;
+    const speed = 20;
 
     const typeWriter = () => {
       if (i < text.length) {
