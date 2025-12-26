@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import QRCode from 'react-qr-code';
 import { toPng } from 'html-to-image';
 
-const QRDescargable = ({ urlPagina = 'https://yonmar22leal.github.io/one-piece/' }) => {
+const QRDescargable = ({ urlPagina = 'https://one-piece-memories.netlify.app' }) => {
   const qrRef = useRef(null);
 
   const descargarQR = () => {
