@@ -10,6 +10,7 @@ import TittleAnimate from './components/TittleAnimate.jsx'
 import BackgroundAudio from './components/BackgroundAudio.jsx'
 import TenderBackground from './components/TenderBackground.jsx'
 import TypingText from './components/TypingText.jsx'
+import QRDescargable from './utils/QRDescargable.jsx'
 
 function App() {
   const [activatedPieces, setActivatedPieces] = useState(new Set())
@@ -79,6 +80,7 @@ Y me recuerda lo afortunada que soy por tenerlos en esta aventura y locura llama
             />
 
             <Gallery gallery={gallery} />
+            <QRDescargable/>
           </>
         )}
       </main>

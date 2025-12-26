@@ -1,7 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-export default defineConfig(({ command }) => ({
+export default defineConfig(({ command, mode }) => ({
   plugins: [react()],
-  base: command === 'build' ? '/one-piece/' : '/',  // ✅ dev: '/', build: '/one-piece/'
+  base: command === 'build' ? 
+    (process.env.NODE_ENV === 'netlify' ? '/' : '/one-piece/') : '/',
 }))
