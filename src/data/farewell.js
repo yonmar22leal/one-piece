@@ -1,4 +1,4 @@
-const farewellText = `
+const farewell = `
 Bueno, muchachos.... Querido one piece💜💙🩷💚♥️🖤 tengo que terminar con este escrito, y aunque ya saben no soy la mejor escribiendo o redactando, créanme cuando les digo que va con todo mi corazón 
 
 Quiero que sepan lo importante que son para mí, así como nuestro nombre en el original significa "una pieza", mi vida y la vida en si, es un rompecabezas, dónde cada uno forma parte de ella, dónde cada uno de ustedes con sus características, personalidades, cualidades y esencia son una pieza que han formado y han Sido parte de lo que soy hoy 
@@ -23,4 +23,4 @@ Con amor: Vale V💜
 Para: MI FAMILIA ONE PIECE 💜🩷💙💚♥️🖤🤍
 `
 
-export default farewellText
+export default farewell
