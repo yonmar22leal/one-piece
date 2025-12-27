@@ -11,7 +11,7 @@ import TittleAnimate from './components/TittleAnimate.jsx'
 import BackgroundAudio from './components/BackgroundAudio.jsx'
 import TenderBackground from './components/TenderBackground.jsx'
 import TypingText from './components/TypingText.jsx'
-import welcomeText from './data/welcomeText.js'
+import welcomeText from './data/WelcomeText.js'
 import farewellText from './data/farewellText.js'
 import { useRevealOnScroll } from './hooks/useRevealOnScroll'
 
