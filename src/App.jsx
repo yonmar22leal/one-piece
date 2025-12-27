@@ -11,7 +11,7 @@ import TittleAnimate from './components/TittleAnimate.jsx'
 import BackgroundAudio from './components/BackgroundAudio.jsx'
 import TenderBackground from './components/TenderBackground.jsx'
 import TypingText from './components/TypingText.jsx'
-import WelcomeText from './data/WelcomeText.js'
+import welcomeText from './data/welcomeText.js'
 import farewellText from './data/farewellText.js'
 import { useRevealOnScroll } from './hooks/useRevealOnScroll'
 
@@ -72,7 +72,7 @@ function App() {
         {/* texto de bienvenida */}
         <div className="typing-section">
           <TypingText
-            text={WelcomeText}
+            text={welcomeText}
             speed={30}
             start={startTyping}
           />
