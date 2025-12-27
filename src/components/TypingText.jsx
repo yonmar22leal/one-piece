@@ -1,27 +1,27 @@
 import React, { useEffect, useState, useRef } from 'react'
 
-function TypingText({ text, speed = 50, start }) {
+function TypingText({ text, speed = 10, start }) {
   const [displayed, setDisplayed] = useState('')
-  const hasFinished = useRef(false)
+  const indexRef = useRef(0)
+  const timeoutRef = useRef(null)
 
   useEffect(() => {
-    // Si aún no se debe comenzar o ya terminó, no hacemos nada
-    if (!start || hasFinished.current) return
+    if (!start) return
+    setDisplayed('')
+    indexRef.current = 0
 
-    let i = 0
-    setDisplayed('') // limpia por si acaso
+    const typeNext = () => {
+      setDisplayed(prev => prev + text.charAt(indexRef.current))
+      indexRef.current += 1
 
-    const interval = setInterval(() => {
-      setDisplayed(prev => prev + text.charAt(i))
-      i++
-      if (i >= text.length) {
-        clearInterval(interval)
-        hasFinished.current = true     // marcamos como completado
+      if (indexRef.current < text.length) {
+        timeoutRef.current = setTimeout(typeNext, speed)
       }
-    }, speed)
+    }
 
-    return () => clearInterval(interval)
-  }, [start, text, speed])
+    typeNext()
+    return () => clearTimeout(timeoutRef.current)
+  }, [text, start, speed])
 
   return <p>{displayed}</p>
 }

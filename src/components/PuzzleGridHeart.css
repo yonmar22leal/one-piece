@@ -84,36 +84,37 @@
 .heart-modal {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.85);
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.7);  /* oscurece todo el fondo */
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
-  backdrop-filter: blur(6px);
 }
 
+/* Contenedor del contenido */
 .heart-modal-content {
-  background: #fff;
-  border-radius: 24px;
-  padding: 1.5rem;
-  max-width: 95vw;
-  max-height: 95vh;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
   position: relative;
+  max-width: 120vw;   /* margen lateral */
+  max-height: 120vh;  /* margen vertical */
+  border-radius: 24px;
+  background: transparent; /* sin fondo, la imagen manda */
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  overflow: hidden;  /* nada se sale del cuadro */
+  z-index: 100000;
 }
 
 .modal-close {
   position: absolute;
-  top: 0.8rem;
-  right: 1.2rem;
+  top: 0.6rem;
+  right: 0.8rem;
   font-size: 2rem;
   border: none;
   background: transparent;
   cursor: pointer;
-  color: #666;
+  color: #fff;            /* blanco sobre fondo oscuro */
+  text-shadow: 0 0 4px rgba(0,0,0,0.8);
 }
 
 
@@ -126,6 +127,8 @@
   max-height: 110vh;
   display: block;
   border-radius: 18px;
+  object-fit: contain; /* se ajusta sin deformarse */
+  z-index: 100001;
 }
 
 

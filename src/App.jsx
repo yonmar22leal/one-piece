@@ -1,3 +1,4 @@
+// App.jsx
 import React, { useState } from 'react'
 import './styles/main.css'
 import PuzzleHeart from './components/PuzzleHeart/PuzzleHeart'
@@ -11,11 +12,25 @@ import BackgroundAudio from './components/BackgroundAudio.jsx'
 import TenderBackground from './components/TenderBackground.jsx'
 import TypingText from './components/TypingText.jsx'
 import QRDescargable from './utils/QRDescargable.jsx'
+import WelcomeText from './data/WelcomeText.js'
+import farewellText from './data/farewellText.js'
+import { useRevealOnScroll } from './hooks/useRevealOnScroll'
+
+// función reutilizada para las rutas de imágenes
+const getImageSrc = (filename) => {
+  if (window.location.pathname.includes('/one-piece/')) {
+    return `/one-piece/images/${filename}`
+  }
+  return `/images/${filename}`
+}
 
 function App() {
   const [activatedPieces, setActivatedPieces] = useState(new Set())
   const [startTyping, setStartTyping] = useState(false)
   const [showContent, setShowContent] = useState(false)
+
+  // estado para el modal global del corazón con fotos
+  const [showHeartModal, setShowHeartModal] = useState(false)
 
   const activatePiece = (id) => {
     setActivatedPieces(prev => new Set([...prev, id]))
@@ -24,15 +39,28 @@ function App() {
   const allActivated = activatedPieces.size === members.length
 
   const handleStart = () => {
-    // 1) comienza a escribir el texto
     setStartTyping(true)
-
-    // 2) mostramos el contenido después de un tiempo (por ej. 4s)
-    //    o si prefieres, puedes controlar esto con un callback desde TypingText
     setTimeout(() => {
       setShowContent(true)
     }, 4000)
   }
+
+  // abrir/cerrar modal y bloquear scroll del body
+  const openHeartModal = () => {
+    setShowHeartModal(true)
+    document.body.style.overflow = 'hidden'
+  }
+
+  const closeHeartModal = () => {
+    setShowHeartModal(false)
+    document.body.style.overflow = ''
+  }
+
+  // secciones que se revelan al hacer scroll
+  const puzzleSection = useRevealOnScroll(showContent)
+  const gridSection = useRevealOnScroll(showContent)
+  const gallerySection = useRevealOnScroll(showContent)
+  const farewellSection = useRevealOnScroll(showContent)
 
   return (
     <div className="App">
@@ -40,52 +68,105 @@ function App() {
 
       <main>
         <TenderBackground />
-
         <TittleAnimate text="titulo animado" />
 
-        {/* Texto: solo se escribe cuando startTyping = true, pero luego NO se quita */}
+        {/* texto de bienvenida */}
         <div className="typing-section">
           <TypingText
-            text="Enn un mundo donde las conexiones se desvanecen, hay algo verdaderamente especial en la vida, como un tesoro que no todos los logran encontrar, esos lazos en que trascienden el tiempo y la distancia, LA AMISTAD.  Y puedo decir, la conseguimos, nuestra historia de amistad se ha convertido en familia, LA FAMILIA ONE PIECE. Cada risa compartida, cada historia, lágrimas, abrazos y cada aventura vivida juntos ha formado esto.... Creo fielmente en el BELLO CLICK (sino han visto la peli jajajaaj se fregaron) Pero está vez, creo y escribo en los bellos click de nosotros que nos han traído hasta aqui....
-Y me recuerda lo afortunada que soy por tenerlos en esta aventura y locura llamada VIDA 💜💙🩷💚♥️🖤 Proverbios 17:17."
+            text={WelcomeText}
             speed={30}
             start={startTyping}
           />
         </div>
 
-        {/* Botón de comenzar: dispara el typing y luego la aparición del contenido */}
-        <div className="intro-section">
-          {!showContent && (
+        {/* botón comenzar */}
+        {!showContent && (
+          <div className="intro-section">
             <button
               className="start-button"
               onClick={handleStart}
             >
               Comenzar
             </button>
-          )}
-        </div>
+          </div>
+        )}
 
-        {/* Contenido principal que aparece luego */}
+        {/* contenido principal */}
         {showContent && (
           <>
-            <PuzzleHeart
-              members={members}
-              activatedPieces={activatedPieces}
-              activatePiece={activatePiece}
-            />
+            {/* puzzle */}
+            <section
+              ref={puzzleSection.ref}
+              className={`reveal-section ${puzzleSection.visible ? 'is-visible' : ''}`}
+            >
+              <PuzzleHeart
+                members={members}
+                activatedPieces={activatedPieces}
+                activatePiece={activatePiece}
+              />
+            </section>
 
-            <PuzzleGridHeart
-              members={members}
-              allActivated={allActivated}
-            />
+            {/* corazón 3x3 que dispara el modal */}
+            <section
+              ref={gridSection.ref}
+              className={`reveal-section ${gridSection.visible ? 'is-visible' : ''}`}
+            >
+              <PuzzleGridHeart
+                members={members}
+                allActivated={allActivated}
+                onOpenModal={openHeartModal}
+              />
+            </section>
 
-            <Gallery gallery={gallery} />
-            <QRDescargable/>
+            {/* galería */}
+            <section
+              ref={gallerySection.ref}
+              className={`reveal-section ${gallerySection.visible ? 'is-visible' : ''}`}
+            >
+              <Gallery gallery={gallery} />
+            </section>
+
+            {/* texto de despedida */}
+            <section
+              ref={farewellSection.ref}
+              className={`reveal-section ${farewellSection.visible ? 'is-visible' : ''}`}
+            >
+              <div className="typing2-section">
+                <TypingText
+                  text={farewellText}
+                  start={startTyping}
+                />
+              </div>
+            </section>
           </>
         )}
       </main>
 
       {showContent && <div id="dancer"></div>}
+
+      {/* MODAL GLOBAL DEL CORAZÓN CON FOTOS */}
+      {showHeartModal && (
+        <div className="heart-modal" onClick={closeHeartModal}>
+          <div
+            className="heart-modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="modal-close"
+              onClick={closeHeartModal}
+              aria-label="Cerrar modal"
+            >
+              ×
+            </button>
+
+            <img
+              src={getImageSrc('corazon-con-fotos.png')}
+              alt="Corazón con todas las fotos"
+              className="heart-modal-image"
+            />
+          </div>
+        </div>
+      )}
     </div>
   )
 }

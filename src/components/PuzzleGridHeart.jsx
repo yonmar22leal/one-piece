@@ -1,24 +1,18 @@
-import React, { useState } from 'react';
-import './PuzzleGridHeart.css';
+import React from 'react'
+import './PuzzleGridHeart.css'
 
-const PuzzleGridHeart = ({ allActivated }) => {
-  const [modalOpen, setModalOpen] = useState(false);
+const getImageSrc = (filename) => {
+  if (window.location.pathname.includes('/one-piece/')) {
+    return `/one-piece/images/${filename}`
+  }
+  return `/images/${filename}`
+}
 
-  const getImageSrc = (filename) => {
-    if (window.location.pathname.includes('/one-piece/')) {
-      return `/one-piece/images/${filename}`;
-    }
-    return `/images/${filename}`;
-  };
-
+const PuzzleGridHeart = ({ allActivated, onOpenModal }) => {
   const handleClick = () => {
-    if (!allActivated) return;      
-    setModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
-  };
+    if (!allActivated) return
+    if (onOpenModal) onOpenModal()
+  }
 
   return (
     <section className="heart-3x3-container">
@@ -29,37 +23,14 @@ const PuzzleGridHeart = ({ allActivated }) => {
               ? getImageSrc('corazon-completo.png')
               : getImageSrc('corazon-incompleto.png')
           }
-          alt="Corazón armado completo"
+          alt={allActivated ? 'Corazón armado completo' : 'Corazón incompleto'}
           className={`heart-full-img ${allActivated ? 'complete' : 'incomplete'}`}
           onClick={handleClick}
           style={{ cursor: allActivated ? 'pointer' : 'default' }}
         />
       </div>
-
-      {modalOpen && (
-        <div className="heart-modal" onClick={closeModal}>
-          <div
-            className="heart-modal-content"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              className="modal-close"
-              onClick={closeModal}
-              aria-label="Cerrar modal"
-            >
-              ×
-            </button>
-
-            <img
-              src={getImageSrc('corazon-con-fotos.png')}
-              alt="Corazón con todas las fotos"
-              className="heart-modal-image"
-            />
-          </div>
-        </div>
-      )}
     </section>
-  );
-};
+  )
+}
 
-export default PuzzleGridHeart;
+export default PuzzleGridHeart
