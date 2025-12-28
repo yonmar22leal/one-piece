@@ -23,17 +23,6 @@ const getImageSrc = (filename) => {
   return `/images/${filename}`
 }
 
-const people = [
-  { name: 'Dani', desc: 'Tu corazón 💜' },
-  { name: 'Gaby', desc: 'Tu valentía ♥️' },
-  { name: 'Animal', desc: 'Tu compañía 💙🖤' },
-  { name: 'Sami', desc: 'Tu fidelidad 🩷' },
-  { name: 'Angela', desc: 'Tu enfoque 💜' },
-  { name: 'Abuelo', desc: 'Tu cuidado 💚' },
-  { name: 'Angie', desc: 'Tu consuelo ♥️' },
-  { name: 'Vale', desc: 'Tu paz 💜🤍' },
-]
-
 function App() {
   const [activatedPieces, setActivatedPieces] = useState(new Set())
   const [startTyping, setStartTyping] = useState(false)
@@ -144,7 +133,6 @@ function App() {
               <div className="typing2-section">
                 <TypingText
                   text={farewell}
-                  names={people}
                   start={startTyping}
                 />
               </div>
