@@ -22,7 +22,7 @@ const Gallery = ({ member, getImageSrc }) => {
           style={{
             width: '350px',
             height: '350px',
-            objectFit: 'cover',
+            objectFit: 'fill',
             borderRadius: '18px',
             boxShadow: '0 4px 10px rgba(0,0,0,0.16)'
           }}

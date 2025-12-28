@@ -1,0 +1,60 @@
+.despedida-container {
+  margin: 50px auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  line-height: 1.7;
+}
+
+.div-horizontal {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+}
+
+.horizontal-personas {
+  width: 70%;
+}
+
+.despedida-container p {
+  margin-bottom: 18px;
+  font-size: 1rem;
+}
+
+.lista-personas {
+  font-weight: 600;
+}
+
+.lista-personas p {
+  margin: 5px 0;
+}
+
+.frase {
+  font-style: italic;
+  color: #555;
+  margin-top: 25px;
+}
+
+.despedida {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.firma {
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.final {
+  margin-top: 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #3b3b3b;
+  letter-spacing: 1px;
+}

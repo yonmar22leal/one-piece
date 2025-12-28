@@ -13,7 +13,7 @@ import TenderBackground from './components/TenderBackground.jsx'
 import TypingText from './components/TypingText.jsx'
 import { useRevealOnScroll } from './hooks/useRevealOnScroll'
 import welcome from './data/welcome.js'
-import farewell from './data/farewell.js'
+import DespedidaOnepiece from './components/DespedidaOnePiece.jsx'
 
 // función reutilizada para las rutas de imágenes
 const getImageSrc = (filename) => {
@@ -56,10 +56,10 @@ function App() {
   }
 
   // secciones que se revelan al hacer scroll
-  const puzzleSection = useRevealOnScroll(showContent)
-  const gridSection = useRevealOnScroll(showContent)
-  const gallerySection = useRevealOnScroll(showContent)
-  const farewellSection = useRevealOnScroll(showContent)
+  const puzzleSection = useRevealOnScroll(showContent, {}, 'puzzle')
+  const gridSection = useRevealOnScroll(showContent, {}, 'grid')
+  const gallerySection = useRevealOnScroll(showContent, { threshold: 0.05, rootMargin: '0px 0px -200px 0px' }, 'gallery')
+  const DespedidaSection = useRevealOnScroll(showContent, {}, 'despedida')
 
   return (
     <div className="App">
@@ -127,15 +127,10 @@ function App() {
 
             {/* texto de despedida */}
             <section
-              ref={farewellSection.ref}
-              className={`reveal-section ${farewellSection.visible ? 'is-visible' : ''}`}
+              ref={DespedidaSection.ref}
+              className={`reveal-section ${DespedidaSection.visible ? 'is-visible' : ''}`}
             >
-              <div className="typing2-section">
-                <TypingText
-                  text={farewell}
-                  start={startTyping}
-                />
-              </div>
+              <DespedidaOnepiece />
             </section>
           </>
         )}

@@ -1,13 +1,13 @@
 // useRevealOnScroll.js
 import { useEffect, useRef, useState } from 'react'
 
-export function useRevealOnScroll(active = true, options = {}) {
+export function useRevealOnScroll(active = true, options = {}, name = '') {
   const ref = useRef(null)
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
     const el = ref.current
-    if (!active || !el) return // <- si no está activo, no hace nada
+    if (!active || !el) return
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -21,7 +21,7 @@ export function useRevealOnScroll(active = true, options = {}) {
 
     observer.observe(el)
     return () => observer.disconnect()
-  }, [active, options])
+  }, [active, options, name])
 
   return { ref, visible }
 }
