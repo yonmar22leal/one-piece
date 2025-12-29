@@ -14,6 +14,7 @@ import TypingText from './components/TypingText.jsx'
 import { useRevealOnScroll } from './hooks/useRevealOnScroll'
 import welcome from './data/welcome.js'
 import DespedidaOnepiece from './components/DespedidaOnePiece.jsx'
+import VideoFinal from './components/VideoFinal.jsx'
 
 // función reutilizada para las rutas de imágenes
 const getImageSrc = (filename) => {
@@ -27,8 +28,6 @@ function App() {
   const [activatedPieces, setActivatedPieces] = useState(new Set())
   const [startTyping, setStartTyping] = useState(false)
   const [showContent, setShowContent] = useState(false)
-
-  // estado para el modal global del corazón con fotos
   const [showHeartModal, setShowHeartModal] = useState(false)
 
   const activatePiece = (id) => {
@@ -60,6 +59,7 @@ function App() {
   const gridSection = useRevealOnScroll(showContent, {}, 'grid')
   const gallerySection = useRevealOnScroll(showContent, { threshold: 0.05, rootMargin: '0px 0px -200px 0px' }, 'gallery')
   const DespedidaSection = useRevealOnScroll(showContent, {}, 'despedida')
+  const videoFinalSection = useRevealOnScroll(showContent, { threshold: 0.1 }, 'video-final')
 
   return (
     <div className="App">
@@ -132,7 +132,14 @@ function App() {
             >
               <DespedidaOnepiece />
             </section>
+            <section
+              ref={videoFinalSection.ref}
+              className={`reveal-section ${videoFinalSection.visible ? 'is-visible' : ''}`}
+            >
+              <VideoFinal />
+            </section>
           </>
+
         )}
       </main>
 

@@ -1,55 +1,84 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef, useState, useEffect, useCallback } from 'react';
 
 function BackgroundAudio() {
-  const audioRef = useRef(null)
-  const [isPlaying, setIsPlaying] = useState(false)
-  const [muted, setMuted] = useState(true)
+  const audioRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [muted, setMuted] = useState(true);
+  const base = import.meta.env.BASE_URL || '/';
 
-  const base = import.meta.env.BASE_URL || '/'
+  // Función para pausar/resumir audio de fondo
+  const toggleBackgroundAudio = useCallback((shouldPlay) => {
+    const audio = audioRef.current;
+    if (!audio) return;
 
-  // Intentar reproducir automáticamente en mute al cargar
-  useEffect(() => {
-    const audio = audioRef.current
-    if (!audio) return
-
-    audio.muted = true
-
-    const playPromise = audio.play()
-    if (playPromise !== undefined) {
-      playPromise
-        .then(() => {
-          setIsPlaying(true)
-          setMuted(true)
-        })
-        .catch(err => {
-          console.log('Autoplay bloqueado:', err)
-        })
+    if (shouldPlay) {
+      if (!isPlaying || muted) {
+        audio.muted = false;
+        audio.play().then(() => {
+          setIsPlaying(true);
+          setMuted(false);
+        }).catch(console.log);
+      }
+    } else {
+      audio.pause();
+      setIsPlaying(false);
     }
-  }, [])
+  }, [isPlaying, muted]);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    audio.muted = true;
+    audio.play().then(() => {
+      setIsPlaying(true);
+      setMuted(true);
+    }).catch(console.log);
+  }, []);
 
   const toggleAudio = async () => {
-    const audio = audioRef.current
-    if (!audio) return
+    const audio = audioRef.current;
+    if (!audio) return;
 
     try {
       if (isPlaying && !muted) {
-        // Está sonando con volumen: lo pausamos
-        audio.pause()
-        setIsPlaying(false)
+        audio.pause();
+        setIsPlaying(false);
       } else {
-        // Al pulsar activamos audio (sin mute)
-        audio.muted = false
-        const playPromise = audio.play()
-        if (playPromise !== undefined) {
-          await playPromise
-        }
-        setIsPlaying(true)
-        setMuted(false)
+        audio.muted = false;
+        await audio.play();
+        setIsPlaying(true);
+        setMuted(false);
       }
     } catch (error) {
-      console.log('Error:', error)
+      console.log('Error:', error);
     }
-  }
+  };
+
+  // Detectar cuando entra/sale fullscreen para pausar/resumir
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      if (document.fullscreenElement) {
+        // Pausar audio de fondo en fullscreen
+        toggleBackgroundAudio(false);
+      } else {
+        // Resumir audio de fondo al salir de fullscreen
+        toggleBackgroundAudio(true);
+      }
+    };
+
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+    document.addEventListener('mozfullscreenchange', handleFullscreenChange);
+    document.addEventListener('MSFullscreenChange', handleFullscreenChange);
+
+    return () => {
+      document.removeEventListener('fullscreenchange', handleFullscreenChange);
+      document.removeEventListener('webkitfullscreenchange', handleFullscreenChange);
+      document.removeEventListener('mozfullscreenchange', handleFullscreenChange);
+      document.removeEventListener('MSFullscreenChange', handleFullscreenChange);
+    };
+  }, [toggleBackgroundAudio]);
 
   return (
     <>
@@ -88,7 +117,7 @@ function BackgroundAudio() {
         {isPlaying && !muted ? '🔇 Silenciar' : '🔊 One Piece'}
       </button>
     </>
-  )
+  );
 }
 
-export default BackgroundAudio
+export default BackgroundAudio;
